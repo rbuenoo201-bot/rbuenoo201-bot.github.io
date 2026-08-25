@@ -3,100 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — ROA Bueno Estates</title>
+  <title>Sell Your House Fast — ROA Bueno Estates</title>
   <style>
-    body {
-      font-family: Georgia, serif;
-      max-width: 760px;
-      margin: 60px auto;
-      padding: 0 24px;
-      color: #222;
-      line-height: 1.75;
-    }
-    h1 { font-size: 1.8rem; margin-bottom: 4px; }
-    h2 { font-size: 1.1rem; margin-top: 2rem; text-transform: uppercase;
-         letter-spacing: 0.05em; color: #444; }
-    p, li { font-size: 0.97rem; }
-    ul { padding-left: 1.4rem; }
-    .updated { color: #888; font-size: 0.85rem; margin-bottom: 2rem; }
-    a { color: #1a5276; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; color: #222; background: #f8f8f8; }
+    .hero { background: #1a3c5e; color: white; text-align: center; padding: 60px 24px 40px; }
+    .hero h1 { font-size: 2rem; margin-bottom: 12px; }
+    .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 500px; margin: 0 auto; }
+    .form-section { max-width: 560px; margin: 40px auto; background: white; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 36px 32px; }
+    .form-section h2 { font-size: 1.3rem; margin-bottom: 20px; color: #1a3c5e; }
+    .field { margin-bottom: 18px; }
+    label { display: block; font-size: 0.9rem; font-weight: bold; margin-bottom: 6px; }
+    input[type=text], input[type=tel], input[type=email], textarea { width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.97rem; }
+    textarea { height: 80px; resize: vertical; }
+    .consent-box { background: #f0f4f8; border: 1px solid #c5d5e8; border-radius: 4px; padding: 14px 16px; margin-bottom: 20px; font-size: 0.84rem; line-height: 1.6; color: #333; }
+    button[type=submit] { width: 100%; background: #1a3c5e; color: white; padding: 14px; border: none; border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+    button[type=submit]:hover { background: #14304d; }
+    .success { display: none; text-align: center; color: #1a7a4a; font-weight: bold; font-size: 1.1rem; padding: 20px; }
+    .privacy-section { max-width: 760px; margin: 40px auto 60px; background: white; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 36px 32px; }
+    .privacy-section h2 { font-size: 1.5rem; margin-bottom: 8px; }
+    .privacy-section h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: #444; margin-top: 24px; margin-bottom: 8px; }
+    .privacy-section p, .privacy-section li { font-size: 0.95rem; line-height: 1.75; }
+    .privacy-section ul { padding-left: 1.4rem; margin-top: 8px; }
+    .updated { color: #888; font-size: 0.85rem; margin-bottom: 20px; }
+    a { color: #1a3c5e; }
+    footer { text-align: center; padding: 20px; font-size: 0.85rem; color: #888; }
   </style>
 </head>
 <body>
 
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: August 22, 2026</p>
+<div class="hero">
+  <h1>Sell Your Chicagoland Home Fast</h1>
+  <p>Get a no-obligation cash offer from ROA Bueno Estates. No agents, no repairs, no hassle.</p>
+</div>
 
-  <p>This Privacy Policy describes how <strong>ROA Bueno Estates</strong>
-  ("we," "us," or "our") collects, uses, and protects information in connection
-  with our real estate acquisition outreach, including SMS text message
-  communications.</p>
+<div class="form-section">
+  <h2>Request Your Free Cash Offer</h2>
+  <form id="optin-form">
+    <div class="field">
+      <label for="fname">Full Name *</label>
+      <input type="text" id="fname" name="name" placeholder="John Smith" required />
+    </div>
+    <div class="field">
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required />
+    </div>
+    <div class="field">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="john@example.com" />
+    </div>
+    <div class="field">
+      <label for="address">Property Address *</label>
+      <input type="text" id="address" name="address" placeholder="123 Main St, Chicago, IL 60601" required />
+    </div>
+    <div class="field">
+      <label for="notes">Additional Details (optional)</label>
+      <textarea id="notes" name="notes" placeholder="e.g. 3 bed / 2 bath, condition, reason for selling…"></textarea>
+    </div>
+    <div class="consent-box">
+      By submitting this form, you consent to receive SMS text messages from <strong>ROA Bueno Estates</strong> regarding your home sale request. Message frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for assistance. See our <a href="#privacy">Privacy Policy</a> below.
+    </div>
+    <button type="submit">Get My Free Cash Offer</button>
+  </form>
+  <div class="success" id="success-msg">✓ Thank you! We’ll reach out shortly via SMS or call.</div>
+</div>
 
-  <h2>1. Information We Collect</h2>
-  <p>We may collect the following categories of personal information:</p>
-  <ul>
-    <li>Name and contact information (phone number, mailing address)</li>
-    <li>Property address and ownership information obtained from public records</li>
-    <li>Communications you send to us via SMS or other channels</li>
-  </ul>
+<div class="privacy-section" id="privacy">
+  <h2>Privacy Policy</h2>
+  <p class="updated">Last updated: August 25, 2026</p>
+  <p>This Privacy Policy describes how <strong>ROA Bueno Estates</strong> (“we,” “us,” or “our”) collects, uses, and protects information in connection with our real estate acquisition outreach, including SMS text message communications.</p>
+  <h3>1. Information We Collect</h3>
+  <p>We may collect: name and contact information (phone, email, address); property address from public records or form submissions; and communications you send us via SMS.</p>
+  <h3>2. How We Obtain Your Information</h3>
+  <p>Contact information is obtained through (a) this web form, where you voluntarily provide your information and expressly consent to SMS communications, and (b) publicly available sources including county property records and tax assessor databases. We do not purchase consumer marketing lists.</p>
+  <h3>3. How We Use Your Information</h3>
+  <p>We use information solely to contact property owners regarding potential real estate transactions and to respond to inquiries you initiate. We do not sell, rent, or share your personal information with third-party marketers.</p>
+  <h3>4. SMS Communications</h3>
+  <p>When you submit the form above, you expressly consent to receive SMS messages from ROA Bueno Estates. Message frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help or email <a href="mailto:rbuenoo201@gmail.com">rbuenoo201@gmail.com</a>.</p>
+  <h3>5. Data Retention</h3>
+  <p>We retain personal information only as long as necessary. Information for opt-outs is retained solely to honor that request.</p>
+  <h3>6. Contact Us</h3>
+  <p><strong>ROA Bueno Estates</strong> — Rodrigo Bueno<br />Email: <a href="mailto:rbuenoo201@gmail.com">rbuenoo201@gmail.com</a> | Phone: (224) 436-9323</p>
+</div>
 
-  <h2>2. How We Obtain Your Information</h2>
-  <p>Contact information is obtained through publicly available sources,
-  including county property records, tax assessor databases, and other public
-  real estate records. We do not purchase consumer marketing lists.</p>
+<footer>&copy; 2026 ROA Bueno Estates. All rights reserved.</footer>
 
-  <h2>3. How We Use Your Information</h2>
-  <p>We use the information we collect solely to:</p>
-  <ul>
-    <li>Contact property owners regarding potential real estate transactions</li>
-    <li>Respond to inquiries you initiate with us</li>
-    <li>Comply with applicable legal obligations</li>
-  </ul>
-  <p>We do not use your information for any purpose unrelated to real estate
-  acquisition, and we do not sell, rent, or share your personal information
-  with third-party marketers.</p>
-
-  <h2>4. SMS Text Message Communications</h2>
-  <p>We may contact you via SMS to inquire about your property. Message
-  frequency varies. Message and data rates may apply.</p>
-  <p><strong>To opt out</strong> at any time, reply <strong>STOP</strong> to
-  any message you receive from us. Once you reply STOP, you will receive no
-  further SMS messages from our number. You may also reply HELP for
-  assistance.</p>
-  <p>By continuing to engage in SMS conversation with us, you acknowledge
-  receipt of this policy and agree to receive SMS messages related to your
-  property.</p>
-
-  <h2>5. Data Retention</h2>
-  <p>We retain personal information only as long as necessary to fulfill the
-  purposes described in this policy, or as required by law. Property owner
-  information for contacts who have opted out is retained solely to honor
-  that opt-out request.</p>
-
-  <h2>6. Data Security</h2>
-  <p>We implement reasonable administrative and technical measures to protect
-  personal information from unauthorized access, disclosure, or misuse.</p>
-
-  <h2>7. Your Rights</h2>
-  <p>Depending on your state of residence, you may have the right to request
-  access to, correction of, or deletion of your personal information. To
-  submit a request, contact us at the information below.</p>
-
-  <h2>8. Contact Us</h2>
-  <p>If you have questions about this Privacy Policy or wish to exercise your
-  rights, please contact us:</p>
-  <p>
-    <strong>ROA Bueno Estates</strong><br />
-    Rodrigo Bueno<br />
-    Email: <a href="mailto:roa.buenoestates@gmail.com">roa.buenoestates@gmail.com</a><br />
-    Phone: (224) 436-9323
-  </p>
-
-  <h2>9. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. The "Last updated"
-  date at the top reflects the most recent revision. Continued use of our
-  SMS communications after any update constitutes acceptance of the revised
-  policy.</p>
-
+<script>
+  document.getElementById("optin-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    this.style.display = "none";
+    document.getElementById("success-msg").style.display = "block";
+  });
+</script>
 </body>
 </html>
