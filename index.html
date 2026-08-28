@@ -3,90 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sell Your House Fast — ROA Bueno Estates</title>
+  <title>Bueno Estates — Sell Your House Fast for Cash in Chicagoland</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Arial, sans-serif; color: #222; background: #f8f8f8; }
-    .hero { background: #1a3c5e; color: white; text-align: center; padding: 60px 24px 40px; }
-    .hero h1 { font-size: 2rem; margin-bottom: 12px; }
-    .hero p { font-size: 1.1rem; opacity: 0.9; max-width: 500px; margin: 0 auto; }
-    .form-section { max-width: 560px; margin: 40px auto; background: white; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 36px 32px; }
-    .form-section h2 { font-size: 1.3rem; margin-bottom: 20px; color: #1a3c5e; }
+    body { font-family: "Segoe UI", Arial, sans-serif; color: #222; background: #f7f7f7; }
+    header { background: #1a3c5e; color: white; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    header .logo { font-size: 1.3rem; font-weight: 700; }
+    header nav a { color: rgba(255,255,255,0.85); text-decoration: none; margin-left: 24px; font-size: 0.9rem; }
+    .hero { background: linear-gradient(135deg, #1a3c5e 0%, #2a5f94 100%); color: white; text-align: center; padding: 80px 24px 60px; }
+    .hero h1 { font-size: 2.3rem; margin-bottom: 16px; font-weight: 700; }
+    .hero p { font-size: 1.1rem; opacity: 0.92; max-width: 560px; margin: 0 auto 32px; line-height: 1.6; }
+    .badges { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 6px 16px; font-size: 0.85rem; }
+    .steps { background: white; padding: 48px 24px; text-align: center; }
+    .steps h2 { font-size: 1.5rem; margin-bottom: 32px; color: #1a3c5e; }
+    .steps-grid { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; max-width: 880px; margin: 0 auto; }
+    .step { flex: 1; min-width: 200px; max-width: 260px; }
+    .step-num { width: 46px; height: 46px; background: #1a3c5e; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; margin: 0 auto 12px; }
+    .step h3 { font-size: 1rem; margin-bottom: 8px; color: #1a3c5e; }
+    .step p { font-size: 0.9rem; color: #555; line-height: 1.5; }
+    .form-section { max-width: 580px; margin: 48px auto; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.09); padding: 40px 36px; }
+    .form-section h2 { font-size: 1.4rem; margin-bottom: 6px; color: #1a3c5e; }
+    .form-sub { color: #666; font-size: 0.9rem; margin-bottom: 24px; }
     .field { margin-bottom: 18px; }
-    label { display: block; font-size: 0.9rem; font-weight: bold; margin-bottom: 6px; }
-    input[type=text], input[type=tel], input[type=email], textarea { width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.97rem; }
+    .field-label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; color: #333; }
+    input[type=text], input[type=tel], input[type=email], textarea { width: 100%; padding: 11px 14px; border: 1px solid #d0d0d0; border-radius: 5px; font-size: 0.97rem; }
     textarea { height: 80px; resize: vertical; }
-    .consent-box { background: #f0f4f8; border: 1px solid #c5d5e8; border-radius: 4px; padding: 14px 16px; margin-bottom: 20px; font-size: 0.84rem; line-height: 1.6; color: #333; }
-    button[type=submit] { width: 100%; background: #1a3c5e; color: white; padding: 14px; border: none; border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+    .sms-opt-in { background: #f0f5fb; border: 1px solid #c5d8ee; border-radius: 6px; padding: 14px 16px; margin-bottom: 20px; }
+    .sms-opt-in .check-row { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; }
+    .sms-opt-in input[type=checkbox] { margin-top: 3px; width: 16px; height: 16px; flex-shrink: 0; cursor: pointer; }
+    .sms-opt-in .check-text { font-size: 0.88rem; line-height: 1.5; color: #333; }
+    .sms-opt-in .fine-print { font-size: 0.78rem; color: #666; margin-top: 8px; line-height: 1.45; padding-left: 26px; }
+    .opt-in-optional { font-size: 0.78rem; color: #888; font-style: italic; margin-top: 4px; }
+    button[type=submit] { width: 100%; background: #1a3c5e; color: white; padding: 15px; border: none; border-radius: 5px; font-size: 1.05rem; font-weight: 700; cursor: pointer; }
     button[type=submit]:hover { background: #14304d; }
-    .success { display: none; text-align: center; color: #1a7a4a; font-weight: bold; font-size: 1.1rem; padding: 20px; }
-    .privacy-section { max-width: 760px; margin: 40px auto 60px; background: white; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 36px 32px; }
-    .privacy-section h2 { font-size: 1.5rem; margin-bottom: 8px; }
-    .privacy-section h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: #444; margin-top: 24px; margin-bottom: 8px; }
-    .privacy-section p, .privacy-section li { font-size: 0.95rem; line-height: 1.75; }
-    .privacy-section ul { padding-left: 1.4rem; margin-top: 8px; }
-    .updated { color: #888; font-size: 0.85rem; margin-bottom: 20px; }
+    .success { display: none; text-align: center; color: #1a7a4a; font-weight: 700; font-size: 1.05rem; padding: 24px; background: #f0faf5; border-radius: 8px; }
+    .testimonials { background: #1a3c5e; color: white; padding: 56px 24px; text-align: center; }
+    .testimonials h2 { font-size: 1.4rem; margin-bottom: 32px; }
+    .testi-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+    .testi { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 20px 24px; flex: 1; min-width: 220px; max-width: 280px; text-align: left; }
+    .testi p { font-size: 0.92rem; line-height: 1.6; opacity: 0.9; margin-bottom: 10px; }
+    .testi .name { font-weight: 700; font-size: 0.82rem; opacity: 0.7; }
+    .privacy-section { max-width: 800px; margin: 48px auto 64px; background: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.09); padding: 40px 36px; }
+    .privacy-section h2 { font-size: 1.5rem; margin-bottom: 6px; color: #1a3c5e; }
+    .privacy-section h3 { font-size: 0.92rem; text-transform: uppercase; letter-spacing: 0.06em; color: #444; margin-top: 22px; margin-bottom: 8px; }
+    .privacy-section p, .privacy-section li { font-size: 0.94rem; line-height: 1.8; color: #333; }
+    .privacy-section ul { padding-left: 1.4rem; margin-top: 6px; }
+    .updated { color: #999; font-size: 0.82rem; margin-bottom: 22px; }
     a { color: #1a3c5e; }
-    footer { text-align: center; padding: 20px; font-size: 0.85rem; color: #888; }
+    footer { background: #111; color: #aaa; text-align: center; padding: 24px; font-size: 0.85rem; }
+    footer a { color: #ccc; }
   </style>
 </head>
 <body>
 
+<header>
+  <div class="logo">Bueno Estates</div>
+  <nav>
+    <a href="#how">How It Works</a>
+    <a href="#form">Get Offer</a>
+    <a href="#privacy">Privacy</a>
+  </nav>
+</header>
+
 <div class="hero">
-  <h1>Sell Your Chicagoland Home Fast</h1>
-  <p>Get a no-obligation cash offer from ROA Bueno Estates. No agents, no repairs, no hassle.</p>
+  <h1>Sell Your Chicagoland Home Fast for Cash</h1>
+  <p>Bueno Estates buys houses in any condition. No repairs, no agents, no fees. Get your no-obligation cash offer today.</p>
+  <div class="badges">
+    <span class="badge">&#10003; No Repairs Needed</span>
+    <span class="badge">&#10003; Close in 7-14 Days</span>
+    <span class="badge">&#10003; Zero Commissions</span>
+    <span class="badge">&#10003; Any Condition</span>
+  </div>
 </div>
 
-<div class="form-section">
+<div class="steps" id="how">
+  <h2>How It Works</h2>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Submit Your Property</h3>
+      <p>Fill out the form with your property address and basic details.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Receive a Cash Offer</h3>
+      <p>We review your property and present a fair, no-obligation offer within 24 hours.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Close on Your Schedule</h3>
+      <p>Choose your closing date. We handle all paperwork. You get paid.</p>
+    </div>
+  </div>
+</div>
+
+<div class="form-section" id="form">
   <h2>Request Your Free Cash Offer</h2>
+  <p class="form-sub">No obligation. We will reach out within 24 hours.</p>
   <form id="optin-form">
     <div class="field">
-      <label for="fname">Full Name *</label>
+      <label class="field-label" for="fname">Full Name *</label>
       <input type="text" id="fname" name="name" placeholder="John Smith" required />
     </div>
     <div class="field">
-      <label for="phone">Phone Number *</label>
+      <label class="field-label" for="phone">Phone Number *</label>
       <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required />
     </div>
     <div class="field">
-      <label for="email">Email Address</label>
+      <label class="field-label" for="email">Email Address</label>
       <input type="email" id="email" name="email" placeholder="john@example.com" />
     </div>
     <div class="field">
-      <label for="address">Property Address *</label>
+      <label class="field-label" for="address">Property Address *</label>
       <input type="text" id="address" name="address" placeholder="123 Main St, Chicago, IL 60601" required />
     </div>
     <div class="field">
-      <label for="notes">Additional Details (optional)</label>
-      <textarea id="notes" name="notes" placeholder="e.g. 3 bed / 2 bath, condition, reason for selling…"></textarea>
+      <label class="field-label" for="notes">About the Property (optional)</label>
+      <textarea id="notes" name="notes" placeholder="Bedrooms, bathrooms, condition, reason for selling..."></textarea>
     </div>
-    <div class="consent-box">
-      By submitting this form, you consent to receive SMS text messages from <strong>ROA Bueno Estates</strong> regarding your home sale request. Message frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for assistance. See our <a href="#privacy">Privacy Policy</a> below.
+
+    <div class="sms-opt-in">
+      <label class="check-row" for="sms-consent">
+        <input type="checkbox" id="sms-consent" name="sms_consent" value="yes" />
+        <span class="check-text">I agree to receive SMS text messages from <strong>Bueno Estates</strong> about my home sale inquiry.</span>
+      </label>
+      <p class="opt-in-optional">This is optional — you can submit the form and receive a cash offer without checking this box.</p>
+      <p class="fine-print">If you check the box above: Msg frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help. See <a href="#privacy">Privacy Policy</a>.</p>
     </div>
+
     <button type="submit">Get My Free Cash Offer</button>
   </form>
-  <div class="success" id="success-msg">✓ Thank you! We’ll reach out shortly via SMS or call.</div>
+  <div class="success" id="success-msg">&#10003; Thank you! We will be in touch within 24 hours.</div>
+</div>
+
+<div class="testimonials">
+  <h2>What Sellers Are Saying</h2>
+  <div class="testi-grid">
+    <div class="testi">
+      <p>"Rodrigo made the process incredibly easy. I had an offer in less than 24 hours and closed in 10 days. Highly recommend!"</p>
+      <div class="name">— Maria T., Chicago, IL</div>
+    </div>
+    <div class="testi">
+      <p>"I needed to sell fast due to a job relocation. Bueno Estates was professional, fair, and stress-free from start to finish."</p>
+      <div class="name">— James K., Franklin Park, IL</div>
+    </div>
+    <div class="testi">
+      <p>"No repairs, no showings, no hassle. Got a fair price and closed on my timeline. Could not ask for more."</p>
+      <div class="name">— Sandra R., Schaumburg, IL</div>
+    </div>
+  </div>
 </div>
 
 <div class="privacy-section" id="privacy">
   <h2>Privacy Policy</h2>
-  <p class="updated">Last updated: August 25, 2026</p>
-  <p>This Privacy Policy describes how <strong>ROA Bueno Estates</strong> (“we,” “us,” or “our”) collects, uses, and protects information in connection with our real estate acquisition outreach, including SMS text message communications.</p>
+  <p class="updated">Last updated: August 27, 2026</p>
+  <p>This Privacy Policy describes how <strong>Bueno Estates</strong> ("we," "us," or "our"), a real estate investment company serving the Chicagoland area, collects, uses, and protects personal information submitted through this website.</p>
+
   <h3>1. Information We Collect</h3>
-  <p>We may collect: name and contact information (phone, email, address); property address from public records or form submissions; and communications you send us via SMS.</p>
-  <h3>2. How We Obtain Your Information</h3>
-  <p>Contact information is obtained through (a) this web form, where you voluntarily provide your information and expressly consent to SMS communications, and (b) publicly available sources including county property records and tax assessor databases. We do not purchase consumer marketing lists.</p>
+  <p>We may collect name, phone number, email, and property information submitted through our web form, as well as from publicly available property records and county assessor databases.</p>
+
+  <h3>2. SMS Communications — Optional Opt-In Only</h3>
+  <p>SMS messaging is entirely optional and is NOT required as a condition of submitting this form or receiving a cash offer. You may opt in to receive SMS messages from Bueno Estates by checking the optional box on our web form.</p>
+  <p>If you opt in: Message frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> at any time to opt out. Reply <strong>HELP</strong> for assistance or email <a href="mailto:rbuenoo201@gmail.com">rbuenoo201@gmail.com</a>.</p>
+
   <h3>3. How We Use Your Information</h3>
-  <p>We use information solely to contact property owners regarding potential real estate transactions and to respond to inquiries you initiate. We do not sell, rent, or share your personal information with third-party marketers.</p>
-  <h3>4. SMS Communications</h3>
-  <p>When you submit the form above, you expressly consent to receive SMS messages from ROA Bueno Estates. Message frequency varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to opt out. Reply <strong>HELP</strong> for help or email <a href="mailto:rbuenoo201@gmail.com">rbuenoo201@gmail.com</a>.</p>
-  <h3>5. Data Retention</h3>
-  <p>We retain personal information only as long as necessary. Information for opt-outs is retained solely to honor that request.</p>
-  <h3>6. Contact Us</h3>
-  <p><strong>ROA Bueno Estates</strong> — Rodrigo Bueno<br />Email: <a href="mailto:rbuenoo201@gmail.com">rbuenoo201@gmail.com</a> | Phone: (224) 436-9323</p>
+  <p>Information is used solely to evaluate your property and communicate with you about a potential cash purchase. We do not sell, rent, or share your personal information with third-party marketers.</p>
+
+  <h3>4. Data Retention</h3>
+  <p>We retain personal information only as long as necessary. Opt-out records are retained solely to honor your request.</p>
+
+  <h3>5. Contact Us</h3>
+  <p><strong>Bueno Estates</strong> — Rodrigo Bueno<br />
+  Email: <a href="mailto:rbuenoo201@gmail.com">rbuenoo201@gmail.com</a> | Phone: (224) 436-9323<br />
+  Service area: Chicagoland, Illinois</p>
 </div>
 
-<footer>&copy; 2026 ROA Bueno Estates. All rights reserved.</footer>
+<footer>
+  &copy; 2026 Bueno Estates. All rights reserved. &nbsp;|&nbsp; <a href="#privacy">Privacy Policy</a> &nbsp;|&nbsp; <a href="mailto:rbuenoo201@gmail.com">Contact</a>
+</footer>
 
 <script>
   document.getElementById("optin-form").addEventListener("submit", function(e) {
